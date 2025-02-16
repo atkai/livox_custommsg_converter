@@ -1,0 +1,12 @@
+<launch>
+    <arg name="input_bag_path" default="/path/to/input.bag" />
+    <arg name="output_bag_path" default="/path/to/output.bag" />
+    <arg name="lidar_topic" default="/livox/lidar" />
+
+    <node pkg="livox_custommsg_converter" type="livox_custommsg_v1tov2" name="livox_custommsg_v1tov2" output="screen">
+        <param name="input_bag_path" value="$(arg input_bag_path)" />
+        <param name="output_bag_path" value="$(arg output_bag_path)" />
+        <param name="lidar_topic" value="$(arg lidar_topic)" />
+
+    </node>
+</launch>

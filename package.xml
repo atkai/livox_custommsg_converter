@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>livox_custommsg_converter</name>
+    <version>0.0.1</version>
+    <description>The Livox_CustomMsg_Converter package</description>
+
+    <maintainer email="kaitang@zju.edu.cn">Kai Tang</maintainer>
+    <license>MIT</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <build_depend>roscpp</build_depend>
+    <exec_depend>roscpp</exec_depend>
+    <build_depend>std_msgs</build_depend>
+    <exec_depend>std_msgs</exec_depend>
+
+    <depend>livox_ros_driver</depend>
+    <depend>livox_ros_driver2</depend>
+
+    <export>
+    </export>
+</package>
