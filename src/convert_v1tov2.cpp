@@ -59,8 +59,10 @@ int main(int argc, char** argv) {
         }
     }
 
-    for (const rosbag::MessageInstance&m : view){
-        output_bag.write(m.getTopic(), m.getTime(), m);
+    rosbag::View view_all(input_bag);
+    for (const rosbag::MessageInstance &m : view_all) {
+        if(m.getTopic() != lidar_topic)
+            output_bag.write(m.getTopic(), m.getTime(), m);
     }
 
     input_bag.close();
